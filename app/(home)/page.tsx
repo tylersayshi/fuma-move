@@ -1,14 +1,16 @@
-import { HeroBackdrop } from "@/components/HeroBackdrop";
+// import { HeroBackdrop } from "@/components/HeroBackdrop";
+import Link from "fumadocs-core/link";
 import { Cards, Card } from "fumadocs-ui/components/card";
 
 export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col justify-center text-center">
-      <h1 className="mb-4 text-2xl font-bold">Arktype</h1>
+      <h1 className="mb-4 text-8xl">Arktype</h1>
       <p className="text-fd-muted-foreground">
         Typescript's 1:1 validator, optimized from editor to runtime
       </p>
-      <HeroBackdrop />
+      <Link href="/docs/intro/setup">Set Sail</Link>
+      {/* <HeroBackdrop /> */}
       <h2 className="text-xl">What awaits</h2>
 
       <Cards>
