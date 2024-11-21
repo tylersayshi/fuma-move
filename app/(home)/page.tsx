@@ -4,12 +4,12 @@ import { Cards, Card } from "fumadocs-ui/components/card";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col justify-center text-center">
+    <div className="flex flex-1 flex-col justify-center text-center">
       <h1 className="mb-4 text-8xl">Arktype</h1>
       <p className="text-fd-muted-foreground">
         Typescript's 1:1 validator, optimized from editor to runtime
       </p>
-      <Link href="/docs/intro/setup">Set Sail</Link>
+      <Link href="/intro/setup">Set Sail</Link>
       {/* <HeroBackdrop /> */}
       <h2 className="text-xl">What awaits</h2>
 
@@ -54,6 +54,6 @@ export default function HomePage() {
   description="Everything you need to know from installation to integration"
   href="/intro/setup"
 /> */}
-    </main>
+    </div>
   );
 }

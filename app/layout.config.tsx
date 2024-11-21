@@ -13,4 +13,5 @@ export const baseOptions: BaseLayoutProps = {
     title: <ArktypeLogo />,
   },
   disableThemeSwitch: true,
+  githubUrl: "https://github.com/arktypeio/arktype",
 };
