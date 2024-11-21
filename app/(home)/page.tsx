@@ -9,7 +9,7 @@ export default function HomePage() {
       <p className="text-fd-muted-foreground">
         Typescript's 1:1 validator, optimized from editor to runtime
       </p>
-      <Link href="/intro/setup">Set Sail</Link>
+      <Link href="/docs/intro/setup">Set Sail</Link>
       {/* <HeroBackdrop /> */}
       <h2 className="text-xl">What awaits</h2>
 
