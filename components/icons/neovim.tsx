@@ -1,7 +1,6 @@
-export const NeovimIcon = () => (
+export const NeovimIcon: React.FC<{ height: number }> = ({ height }) => (
   <svg
-    width="602px"
-    height="734px"
+    height={height}
     viewBox="0 0 602 734"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

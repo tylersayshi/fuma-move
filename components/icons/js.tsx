@@ -1,5 +1,5 @@
-export const JsIcon = () => (
-  <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
+export const JsIcon: React.FC<{ height: number }> = ({ height }) => (
+  <svg viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg" height={height}>
     <g>
       <path fill="#fff" d="M0 0h256v256H0V0z" />
       <path

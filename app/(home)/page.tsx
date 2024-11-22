@@ -1,44 +1,52 @@
-// import { HeroBackdrop } from "@/components/HeroBackdrop";
-import Link from "fumadocs-core/link";
+import { Code } from "@/components/code-snippets/Code";
+import { Hero } from "@/components/Hero";
+import { TsIcon } from "@/components/icons/ts";
 import { Cards, Card } from "fumadocs-ui/components/card";
+import {
+  RocketIcon,
+  MessageSquareTextIcon,
+  MessageCircleWarning,
+  SearchIcon,
+  LightbulbIcon,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-1 flex-col justify-center text-center">
-      <h1 className="mb-4 text-8xl">Arktype</h1>
-      <p className="text-fd-muted-foreground">
-        Typescript's 1:1 validator, optimized from editor to runtime
-      </p>
-      <Link href="/docs/intro/setup">Set Sail</Link>
-      {/* <HeroBackdrop /> */}
-      <h2 className="text-xl">What awaits</h2>
+    <div className="flex-1 pt-40 container relative">
+      <Hero />
+      <h2 className="text-4xl text-fd-accent font-semibold mb-3">
+        What awaits
+      </h2>
 
       <Cards>
-        <Card title="Unparalleled DX" icon="seti:tsconfig">
+        <Card
+          title="Unparalleled DX"
+          icon={<TsIcon height={20} className="opacity-40" />}
+        >
           Type syntax you already know with safety and completions unlike
-          anything you've ever seen
+          anything you&apos;ve ever seen
           {/* TODO Code */}
         </Card>
-        <Card title="Faster... everything" icon="rocket">
+        <Card title="Faster... everything" icon={<RocketIcon />}>
           100x faster than Zod at runtime with editor performance that will
           remind you how autocomplete is supposed to feel
           {/* <RuntimeBenchmarksGraph /> */}
         </Card>
-        <Card title="Clarity and Concision" icon="comment-alt">
+        <Card title="Clarity and Concision" icon={<MessageSquareTextIcon />}>
           Definitions are half as long, type errors are twice as readable, and
           hovers tell you just what really matters
-          {/* <Code code={clarityAndConcision} /> */}
+          <Code filename="clarityAndConcision.twoslash.js" />
         </Card>
-        <Card title="Better Errors" icon="error">
+        <Card title="Better Errors" icon={<MessageCircleWarning />}>
           Deeply customizable messages with great defaults
           {/* <Code code={betterErrors} /> */}
         </Card>
-        <Card title="Deep Introspectability" icon="seti:code-search">
+        <Card title="Deep Introspectability" icon={<SearchIcon />}>
           ArkType uses set theory to understand and expose the relationships
           between your types at runtime the way TypeScript does at compile time
           {/* <Code code={deepIntrospectability} /> */}
         </Card>
-        <Card title="Intrinsic Optimization" icon="seti:smarty">
+        <Card title="Intrinsic Optimization" icon={<LightbulbIcon />}>
           Every schema is internally normalized and reduced to its purest and
           fastest representation
           {/* <Code code={intrinsicOptimization} /> */}

@@ -34,26 +34,23 @@ type BoatProps = {
   bobFrames: number[];
 };
 
-const Boat = ({ loopDuration, bobFrames }: BoatProps) => (
-  <motion.div
-    style={{
-      position: "fixed",
-      top: "-1.2rem",
-      // Other navbar items are 12
-      zIndex: 11,
-    }}
-    initial={{ left: "-7%" }}
-    animate={{
-      left: "100%",
-      y: bobFrames,
-    }}
-    transition={{
-      duration: loopDuration,
-      repeat: Infinity,
-      ease: "linear",
-      delay: 1,
-    }}
-  >
-    <BoatIcon />
-  </motion.div>
-);
+const Boat = ({ loopDuration, bobFrames }: BoatProps) => {
+  return (
+    <motion.div
+      className="absolute z-10 -top-10"
+      initial={{ left: "-7%" }}
+      animate={{
+        left: "100%",
+        y: bobFrames,
+      }}
+      transition={{
+        duration: loopDuration,
+        repeat: Infinity,
+        ease: "linear",
+        delay: 1,
+      }}
+    >
+      <BoatIcon height={120} />
+    </motion.div>
+  );
+};

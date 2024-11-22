@@ -1,13 +1,10 @@
-export const VscodeIcon = () => (
+export const VscodeIcon: React.FC<{ height: number }> = ({ height }) => (
   <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask
       id="mask0"
       // mask-type="alpha"
       maskUnits="userSpaceOnUse"
-      x="0"
-      y="0"
-      width="100"
-      height="100"
+      height={height}
     >
       <path
         fillRule="evenodd"

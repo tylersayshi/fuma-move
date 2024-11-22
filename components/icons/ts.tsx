@@ -1,5 +1,13 @@
-export const TsIcon = () => (
-  <svg viewBox="0 0 124 124" xmlns="http://www.w3.org/2000/svg">
+export const TsIcon: React.FC<{ height: number; className?: string }> = ({
+  height,
+  className,
+}) => (
+  <svg
+    viewBox="0 0 124 124"
+    xmlns="http://www.w3.org/2000/svg"
+    height={height}
+    className={className}
+  >
     <g>
       <rect width="128" height="128" fill="#fff" rx="2" />
       <path

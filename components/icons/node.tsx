@@ -1,9 +1,8 @@
-export const NodeIcon = () => (
+export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
   <svg
-    width="800px"
-    height="800px"
     viewBox="-3.8 -1.5 40.921 40.921"
     xmlns="http://www.w3.org/2000/svg"
+    height={height}
   >
     <defs>
       <linearGradient

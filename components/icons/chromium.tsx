@@ -1,8 +1,9 @@
-export const ChromiumIcon = () => (
+export const ChromiumIcon: React.FC<{ height: number }> = ({ height }) => (
   <svg
     version="1.1"
     viewBox="0 0 511.98 511.98"
     xmlns="http://www.w3.org/2000/svg"
+    height={height}
   >
     <defs>
       <linearGradient

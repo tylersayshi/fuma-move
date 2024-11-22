@@ -1,10 +1,5 @@
-export const IntellijIcon = () => (
-  <svg
-    height="105"
-    viewBox="0 0 105 105"
-    width="105"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+export const IntellijIcon: React.FC<{ height: number }> = ({ height }) => (
+  <svg height={height} viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg">
     <linearGradient
       id="a"
       gradientUnits="userSpaceOnUse"

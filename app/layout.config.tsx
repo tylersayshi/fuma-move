@@ -1,3 +1,4 @@
+import { FloatYourBoat } from "@/components/FloatYourBoat";
 import { ArktypeLogo } from "@/components/icons/arktype-logo";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
@@ -11,6 +12,7 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 export const baseOptions: BaseLayoutProps = {
   nav: {
     title: <ArktypeLogo />,
+    children: <FloatYourBoat />,
   },
   disableThemeSwitch: true,
   githubUrl: "https://github.com/arktypeio/arktype",

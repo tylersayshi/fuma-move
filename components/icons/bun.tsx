@@ -1,5 +1,10 @@
-export const BunIcon = () => (
-  <svg id="Bun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 70">
+export const BunIcon: React.FC<{ height: number }> = ({ height }) => (
+  <svg
+    id="Bun"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 80 70"
+    height={height}
+  >
     <title>Bun Logo</title>
     <path
       id="Shadow"
