@@ -1,12 +1,14 @@
-import { source } from '@/lib/source';
+import { source } from "@/lib/source";
 import {
   DocsPage,
   DocsBody,
   DocsDescription,
   DocsTitle,
-} from 'fumadocs-ui/page';
-import { notFound } from 'next/navigation';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+} from "fumadocs-ui/page";
+import { notFound } from "next/navigation";
+import defaultMdxComponents from "fumadocs-ui/mdx";
+import { Popup, PopupContent, PopupTrigger } from "fumadocs-twoslash/ui";
+import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -22,7 +24,20 @@ export default async function Page(props: {
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <MDX components={{ ...defaultMdxComponents }} />
+        <MDX
+          components={{
+            ...defaultMdxComponents,
+            Popup,
+            PopupContent,
+            PopupTrigger,
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            pre: ({ ref: _, ...props }) => (
+              <CodeBlock {...props}>
+                <Pre>{props.children}</Pre>
+              </CodeBlock>
+            ),
+          }}
+        />
       </DocsBody>
     </DocsPage>
   );

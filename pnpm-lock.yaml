@@ -14,6 +14,9 @@ importers:
       fumadocs-mdx:
         specifier: 11.1.1
         version: 11.1.1(acorn@8.14.0)(fumadocs-core@14.4.2(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      fumadocs-twoslash:
+        specifier: ^2.0.1
+        version: 2.0.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(fumadocs-ui@14.4.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(shiki@1.23.1)(typescript@5.6.3)
       fumadocs-ui:
         specifier: 14.4.2
         version: 14.4.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15)
@@ -1652,6 +1655,13 @@ packages:
     peerDependencies:
       fumadocs-core: ^14.0.0
       next: 14.x.x || 15.x.x
+
+  fumadocs-twoslash@2.0.1:
+    resolution: {integrity: sha512-rpc4yci9sSslsmuS3KRp7ByqXFvffpSSMnmCPsByLnHY0t+aUFut7YAfvqJPyALPpj/si9ghaPJG/T1fcrL0uA==}
+    peerDependencies:
+      fumadocs-ui: ^13.0.0 || ^14.0.0
+      react: '>= 18'
+      shiki: 1.x.x
 
   fumadocs-ui@14.4.2:
     resolution: {integrity: sha512-WeSfd4fZ+dWSlAvyLjg6ZxOERJQ/nS9qa5eO0mXTsZ5QHhJoF5vgo4aU8C6fr0Dy/LHqdShq7JIedBUUBN87Gg==}
@@ -4766,6 +4776,24 @@ snapshots:
     transitivePeerDependencies:
       - acorn
       - supports-color
+
+  fumadocs-twoslash@2.0.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(fumadocs-ui@14.4.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(shiki@1.23.1)(typescript@5.6.3):
+    dependencies:
+      '@radix-ui/react-popover': 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@shikijs/twoslash': 1.23.1(typescript@5.6.3)
+      fumadocs-ui: 14.4.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15)
+      mdast-util-from-markdown: 2.0.2
+      mdast-util-gfm: 3.0.0
+      mdast-util-to-hast: 13.2.0
+      react: 18.3.1
+      shiki: 1.23.1
+      tailwind-merge: 2.5.4
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - react-dom
+      - supports-color
+      - typescript
 
   fumadocs-ui@14.4.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(next@15.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.15):
     dependencies:

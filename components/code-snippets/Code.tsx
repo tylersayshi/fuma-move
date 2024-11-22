@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import { arkHighlight } from "./highlight";
+// import { arkHighlight } from "./highlight";
 
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 
@@ -13,11 +13,11 @@ export const Code: React.FC<CodeProps> = async ({ filename }) => {
     "utf8"
   );
 
-  const highlightedText = await arkHighlight({ code: codeText });
+  // const highlightedText = await arkHighlight({ code: codeText });
 
   return (
     <CodeBlock>
-      <Pre dangerouslySetInnerHTML={{ __html: highlightedText }} />
+      <Pre lang="ts">{codeText}</Pre>
     </CodeBlock>
   );
 };
