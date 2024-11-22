@@ -31,11 +31,13 @@ export default async function Page(props: {
             PopupContent,
             PopupTrigger,
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            pre: ({ ref: _, ...props }) => (
-              <CodeBlock {...props}>
-                <Pre>{props.children}</Pre>
-              </CodeBlock>
-            ),
+            pre: ({ ref: _, ...props }) => {
+              return (
+                <CodeBlock {...props}>
+                  <Pre>{props.children}</Pre>
+                </CodeBlock>
+              );
+            },
           }}
         />
       </DocsBody>
