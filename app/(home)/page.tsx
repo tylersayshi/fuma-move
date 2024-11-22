@@ -1,6 +1,7 @@
 import { Code } from "@/components/code-snippets/Code";
 import { Hero } from "@/components/Hero";
 import { TsIcon } from "@/components/icons/ts";
+import { RuntimeBenchmarksGraph } from "@/components/RuntimeBenchmarksGraph";
 import { Cards, Card } from "fumadocs-ui/components/card";
 import {
   RocketIcon,
@@ -25,12 +26,12 @@ export default function HomePage() {
         >
           Type syntax you already know with safety and completions unlike
           anything you&apos;ve ever seen
-          {/* TODO Code */}
+          <Code filename="unparalleledDx.twoslash.js" />
         </Card>
         <Card title="Faster... everything" icon={<RocketIcon />}>
           100x faster than Zod at runtime with editor performance that will
           remind you how autocomplete is supposed to feel
-          {/* <RuntimeBenchmarksGraph /> */}
+          <RuntimeBenchmarksGraph />
         </Card>
         <Card title="Clarity and Concision" icon={<MessageSquareTextIcon />}>
           Definitions are half as long, type errors are twice as readable, and
@@ -39,17 +40,17 @@ export default function HomePage() {
         </Card>
         <Card title="Better Errors" icon={<MessageCircleWarning />}>
           Deeply customizable messages with great defaults
-          {/* <Code code={betterErrors} /> */}
+          <Code filename="betterErrors.twoslash.ts" />
         </Card>
         <Card title="Deep Introspectability" icon={<SearchIcon />}>
           ArkType uses set theory to understand and expose the relationships
           between your types at runtime the way TypeScript does at compile time
-          {/* <Code code={deepIntrospectability} /> */}
+          <Code filename="deepIntrospectability.twoslash.js" />
         </Card>
         <Card title="Intrinsic Optimization" icon={<LightbulbIcon />}>
           Every schema is internally normalized and reduced to its purest and
           fastest representation
-          {/* <Code code={intrinsicOptimization} /> */}
+          <Code filename="intrinsicOptimization.twoslash.js" />
         </Card>
         {/* <Card title="Portable" icon="seti:json">
 		Most definitions are just objects and strings- take them across the stack or

@@ -2,7 +2,6 @@ import { transformerNotationErrorLevel } from "@shikijs/transformers";
 import arkdarkColors from "arkdark/arkdark.json";
 import arktypeTextmate from "arkdark/tsWithArkType.tmLanguage.json";
 import { createHighlighter } from "shiki";
-import { addCopyButton, twoslash } from "./shiki.config.js";
 
 let highlighter: Awaited<ReturnType<typeof createHighlighter>> | undefined;
 
@@ -23,9 +22,9 @@ export const arkHighlight = async (args: HighlightArgs) => {
     lang: args.lang ?? "ts",
     theme: "ArkDark",
     transformers: [
-      twoslash,
+      // twoslash,
       transformerNotationErrorLevel() as never,
-      addCopyButton,
+      // addCopyButton,
     ],
   });
 };

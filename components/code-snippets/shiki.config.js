@@ -5,7 +5,6 @@ import { transformerTwoslash } from "@shikijs/twoslash";
 import arkdarkColors from "arkdark/arkdark.json";
 import arkdarkPackageJson from "arkdark/package.json";
 import arktypeTextmate from "arkdark/tsWithArkType.tmLanguage.json";
-import { readFileSync } from "fs";
 import { defaultCompilerOptions } from "twoslash";
 
 // Theme adjustments
@@ -120,36 +119,9 @@ declare global {
   },
 });
 
-const addCopyButtonListenersPath = new URL(
-  "./addCopyButtonListeners.js",
-  import.meta.url
-);
-
-const addCopyButtonListenersSrc = readFileSync(addCopyButtonListenersPath, {
-  encoding: "utf-8",
-});
-
-// /** @type {import("shiki").ShikiTransformer} */
-export const addCopyButton = {
-  name: "addCopyButton",
-  postprocess(html) {
-    return `<div class="code-container">
-	<div class="code-source">
-		${html}
-	</div>
-    <button class="copy-button" aria-label="copy code">
-        <img class="copy-icon" src="/copy.svg"/>
-		<script type="module">
-			${addCopyButtonListenersSrc}
-		</script>
-    </button>
-</div>`;
-  },
-};
-
 export const shikiConfig = {
   theme: arkdarkColors,
   langs: [arktypeTextmate],
-  transformers: [twoslash, transformerNotationErrorLevel(), addCopyButton],
+  transformers: [transformerNotationErrorLevel()],
   wrap: true,
 };
