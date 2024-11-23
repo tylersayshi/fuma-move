@@ -9,7 +9,7 @@ import { SyntaxTab } from "@/components/SyntaxTab";
 
 ### Kitchen Sink
 
-```ts
+```ts twoslash
 export const currentTsSyntax = type({
   keyword: "null",
   stringLiteral: "'TS'",
@@ -38,7 +38,7 @@ export const currentTsSyntax = type({
 
 ## Constraints
 
-```ts
+```ts twoslash
 // runtime-specific syntax and builtin keywords with great error messages
 
 export const validationSyntax = type({
@@ -98,8 +98,8 @@ if (maybeMe instanceof type.errors) {
 
 // Since what is enclosed by the date literal tokens is not parsed, you can also insert values dynamically, e.g.:
 
-// `` ts
+// ``ts
 // // a Date in the past
 // const  = type(`Date<=d"${Date.now()}"`)
-//  ``
+// ``
 }

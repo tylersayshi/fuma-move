@@ -12,7 +12,7 @@ Objects definitions can include any combination of required, optional, defaultab
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -28,7 +28,7 @@ const myObject = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -49,7 +49,7 @@ const myObject = type({
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -62,7 +62,7 @@ const myObject = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -75,7 +75,7 @@ const myObject = type({
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -88,7 +88,7 @@ const myObject = type({
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const symbolicKey = Symbol();
 
 const myObject = type({
@@ -109,7 +109,7 @@ Rather, it adds metadata that changes how it works when referenced from an objec
 <details>
 	<summary>See an example</summary>
 
-```ts
+```ts twoslash
 const optionalString = type.string.optional();
 
 optionalString.allows(undefined); // false
@@ -131,7 +131,7 @@ Prefer the key-embedded syntax (`"optionalKey?":`) where possible.
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const myObject = type({
   defaultableKey: "boolean = false",
 });
@@ -141,7 +141,7 @@ const myObject = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const myObject = type({
   defaultableKey: type.boolean.default(false),
 });
@@ -151,7 +151,7 @@ const myObject = type({
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const myObject = type({
   defaultableKey: ["boolean", "=", false],
 });
@@ -161,7 +161,7 @@ const myObject = type({
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const myObject = type({
   defaultableKey: type("boolean", "=", false),
 });
@@ -176,7 +176,7 @@ const myObject = type({
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const myObject = type({
   // index signatures do not require a label
   "[string]": "number.integer",

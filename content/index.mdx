@@ -1,0 +1,49 @@
+import { Code } from "@/components/code-snippets/Code";
+import { Hero } from "@/components/Hero";
+import { TsIcon } from "@/components/icons/ts";
+import { RuntimeBenchmarksGraph } from "@/components/RuntimeBenchmarksGraph";
+import { Cards, Card } from "fumadocs-ui/components/card";
+import {
+  RocketIcon,
+  MessageSquareTextIcon,
+  MessageCircleWarning,
+  SearchIcon,
+  LightbulbIcon,
+} from "lucide-react";
+
+<h2 className="text-4xl text-fd-accent font-semibold mb-3">What awaits</h2>
+
+<Cards>
+  <Card
+    title="Unparalleled DX"
+    icon={<TsIcon height={20} className="opacity-40" />}
+  >
+    Type syntax you already know with safety and completions unlike anything
+    you&apos;ve ever seen
+   ```ts twoslash
+   // @noErrors
+import { type } from "arktype"
+// prettier-ignore
+// ---cut---
+const user = type({
+	name: "string",
+	platform: "'android' | 'ios'",
+	"version?": "number | s"
+	//                     ^|
+})
+```
+</Card>
+
+{/\* <Card title="Portable" icon="seti:json">
+Most definitions are just objects and strings- take them across the stack or
+even outside JS altogether
+
+</Card> */}
+</Cards>
+
+{/\* <LinkCard
+
+title="Doc up"
+description="Everything you need to know from installation to integration"
+href="/intro/setup"
+/> \*/}

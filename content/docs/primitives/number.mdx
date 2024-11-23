@@ -11,7 +11,7 @@ import { SyntaxTab } from "@/components/SyntaxTab";
 
 ### Literals
 
-```ts
+```ts twoslash
 const literals = type({
   number: "1337",
 });
@@ -28,7 +28,7 @@ Constrain a `number` to a multiple of the specified integer.
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const evens = type({
   key: "number%2",
 });
@@ -38,7 +38,7 @@ const evens = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const evens = type({
   key: type.number.divisibleBy(2),
 });

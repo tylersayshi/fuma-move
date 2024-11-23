@@ -16,7 +16,7 @@ All unions are automatically discriminated to optimize check time and error mess
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const unions = type({
   key: "string | number",
 });
@@ -26,7 +26,7 @@ const unions = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const unions = type({
   key: type.string.or(type.number),
 });
@@ -36,7 +36,7 @@ const unions = type({
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const unions = type({
   key: ["string", "|", { name: "string" }],
 });
@@ -46,7 +46,7 @@ const unions = type({
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const unions = type({
   key: type("string", "|", { name: "string" }),
 });
@@ -76,7 +76,7 @@ While embedded [literal syntax](/literals) is usually ideal for defining exact p
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValue = type.unit(mySymbol);
@@ -86,7 +86,7 @@ const exactValue = type.unit(mySymbol);
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValue = type(["===", mySymbol]);
@@ -96,7 +96,7 @@ const exactValue = type(["===", mySymbol]);
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValue = type("===", mySymbol);
@@ -114,7 +114,7 @@ const exactValue = type("===", mySymbol);
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValueFromSet = type.enumerated(1337, true, mySymbol);
@@ -124,7 +124,7 @@ const exactValueFromSet = type.enumerated(1337, true, mySymbol);
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValueFromSet = type(["===", 1337, true, mySymbol]);
@@ -134,7 +134,7 @@ const exactValueFromSet = type(["===", 1337, true, mySymbol]);
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const mySymbol = Symbol();
 
 const exactValueFromSet = type("===", 1337, true, mySymbol);
@@ -156,7 +156,7 @@ const exactValueFromSet = type("===", 1337, true, mySymbol);
 
 By default, ArkType's operators follow the same precedence as TypeScript's. Also like in TypeScript, this can be overridden by wrapping an expression in parentheses.
 
-```ts
+```ts twoslash
 // hover to see the distinction!
 const groups = type({
   stringOrArrayOfNumbers: "string | number[]",
@@ -168,7 +168,7 @@ const groups = type({
 
 `this` is a special keyword that can be used to create a recursive type referencing the root of the current definition.
 
-```ts
+```ts twoslash
 const fetchGift = async () => null;
 // ---cut---
 const disappointingGift = type({ label: "string", "box?": "this" });
@@ -180,14 +180,14 @@ const chainable = myGift.box?.box?.label;
 
 Unlike its TypeScript counterpart, ArkType's `this` is not limited to interfaces. It can also be used from within a tuple expression.
 
-```ts
+```ts twoslash
 // boxes now expects an array of our gift object
 const disappointingGifts = type({ label: "string", boxes: "this" }, "[]");
 ```
 
 Referencing `this` from within a scope will result in a ParseError. For similar behavior within a scoped definition, just reference the alias by name:
 
-```ts
+```ts twoslash
 const types = scope({
   disappointingGift: {
     label: "string",

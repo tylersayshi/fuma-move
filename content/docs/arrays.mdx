@@ -8,7 +8,7 @@ import { SyntaxTab } from "@/components/SyntaxTab";
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const arrays = type({
   key: "string[]",
 });
@@ -18,7 +18,7 @@ const arrays = type({
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const arrays = type({
   key: type.string.array(),
 });
@@ -28,7 +28,7 @@ const arrays = type({
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const arrays = type({
   key: [{ name: "string" }, "[]"],
 });
@@ -38,7 +38,7 @@ const arrays = type({
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const arrays = type({
   key: type({ name: "string" }, "[]"),
 });
@@ -61,7 +61,7 @@ Like objects, tuples are structures whose values are nested definitions. Like Ty
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const myTuple = type([
   "string",
   // Object definitions can be nested in tuples- and vice versa!
@@ -75,7 +75,7 @@ const myTuple = type([
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const myTuple = type([
   type.string,
   // Object definitions can be nested in tuples- and vice versa!
@@ -98,7 +98,7 @@ Like in TypeScript, optional elements are mutually exclusive with postfix elemen
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 const myTuple = type(["string", "boolean?", "number?"]);
 ```
 
@@ -106,7 +106,7 @@ const myTuple = type(["string", "boolean?", "number?"]);
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 const myTuple = type([
   type.string,
   type.boolean.optional(),
@@ -118,7 +118,7 @@ const myTuple = type([
 
     <SyntaxTab kind="tuple">
 
-```ts
+```ts twoslash
 const myTuple = type([
   "string",
   [
@@ -134,7 +134,7 @@ const myTuple = type([
 
     <SyntaxTab kind="spread">
 
-```ts
+```ts twoslash
 const myTuple = type([
   "string",
   type(
@@ -159,7 +159,7 @@ They are specified with a `"..."` operator preceding an array element.
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 // allows a string followed by zero or more numbers
 const myTuple = type(["string", "...", "number[]"]);
 ```
@@ -168,7 +168,7 @@ const myTuple = type(["string", "...", "number[]"]);
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 // allows a string followed by zero or more numbers
 const myTuple = type([type.string, "...", type.number.array()]);
 ```
@@ -186,7 +186,7 @@ They are mutually exclusive with optional elements.
 <Tabs>
 	<SyntaxTab kind="string">
 
-```ts
+```ts twoslash
 // allows zero or more numbers followed by a boolean, then a string
 const myTuple = type(["...", "number[]", "boolean", "string"]);
 ```
@@ -195,7 +195,7 @@ const myTuple = type(["...", "number[]", "boolean", "string"]);
 
     <SyntaxTab kind="fluent">
 
-```ts
+```ts twoslash
 // allows zero or more numbers followed by a boolean, then a string
 const myTuple = type(["...", type.number.array(), type.boolean, type.string]);
 ```

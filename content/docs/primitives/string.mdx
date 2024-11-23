@@ -8,11 +8,11 @@ title: String
 
 ### Literals
 
-```ts
+```ts twoslash
 const literals = type({
-	singleQuoted: "'typescript'",
-	doubleQuoted: '"arktype"'
-})
+  singleQuoted: "'typescript'",
+  doubleQuoted: '"arktype"',
+});
 ```
 
 ### Patterns
@@ -21,11 +21,11 @@ Regex literals specify an unanchored regular expression that an input string mus
 
 They can either be string-embedded or refer directly to a `RegExp` instance.
 
-```ts
+```ts twoslash
 const literals = type({
-	stringEmbedded: "/^a.*z$/",
-	regexLiteral: /^a.*z$/
-})
+  stringEmbedded: "/^a.*z$/",
+  regexLiteral: /^a.*z$/,
+});
 ```
 
 ### Lengths

@@ -10,13 +10,13 @@ title: Integrations
 
 ArkType can easily be used with tRPC via the `assert` prop:
 
-```ts
+```ts twoslash
 t.procedure.input(
-	type({
-		name: "string",
-		"age?": "number"
-	}).assert
-)
+  type({
+    name: "string",
+    "age?": "number",
+  }).assert
+);
 ```
 
 ### react-hook-form
