@@ -1,3 +1,4 @@
+import { cn } from "fumadocs-ui/components/api";
 import React from "react";
 
 const barStyles: React.CSSProperties = {
@@ -21,15 +22,20 @@ const zodBarStyles = {
     "repeating-linear-gradient(135deg, #b084f6, #b084f6 10px, #9a6fe3 10px, #9a6fe3 20px)",
 };
 
-export const RuntimeBenchmarksGraph = () => (
-  <div style={{ fontSize: 14, fontWeight: 500 }}>
+export const RuntimeBenchmarksGraph: React.FC<{ className?: string }> = ({
+  className,
+}) => (
+  <div
+    style={{ fontSize: 14, fontWeight: 500 }}
+    className={cn("font-semibold text-white", className)}
+  >
     <div
       style={{
         display: "flex",
         flexDirection: "row",
       }}
     >
-      <h6 style={{ fontSize: 16 }}>
+      <h6 className="text-lg mb-2">
         Object Validation, Node v22.2.0 (
         <a
           target="_blank"

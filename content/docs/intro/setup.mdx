@@ -9,18 +9,26 @@ import { Pre, CodeBlock } from "fumadocs-ui/components/codeblock";
 
 ## Installation
 
-<Tabs>
-  <Tab value="pnpm" icon="pnpm">
-    {/* <Code code="pnpm install arktype" lang="bash" /> */}
+<Tabs items={["pnpm", "npm", "yarn", "bun"]}>
+  <Tab value="pnpm">
+    <CodeBlock lang="bash">
+      <Pre>pnpm install arktype</Pre>
+    </CodeBlock>
   </Tab>
-  <Tab value="npm" icon="seti:npm">
-    {/* <Code code="npm install arktype" lang="bash" /> */}
+  <Tab value="npm">
+    <CodeBlock lang="bash">
+      <Pre>npm install arktype</Pre>
+    </CodeBlock>
   </Tab>
-  <Tab value="yarn" icon="seti:yarn">
-    {/* <Code code="yarn install arktype" lang="bash" /> */}
+  <Tab value="yarn">
+    <CodeBlock lang="bash">
+      <Pre>yarn install arktype</Pre>
+    </CodeBlock>
   </Tab>
-  <Tab value="bun" icon="bun">
-    {/* <Code code="bun install arktype" lang="bash" /> */}
+  <Tab value="bun">
+    <CodeBlock lang="bash">
+      <Pre>bun install arktype</Pre>
+    </CodeBlock>
   </Tab>
 </Tabs>
 

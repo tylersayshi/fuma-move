@@ -4,6 +4,7 @@ import { highlight } from "fumadocs-core/server";
 import arkdarkColors from "arkdark/arkdark.json" with { type: "json" };
 import { transformerTwoslash } from "fumadocs-twoslash";
 import { Popup, PopupContent, PopupTrigger } from "fumadocs-twoslash/ui";
+import { getSingletonHighlighter, bundledLanguages } from "shiki";
 
 type CodeProps = {
   filename: string;
@@ -17,12 +18,21 @@ export const Code: React.FC<CodeProps> = async ({ filename, lang = "ts" }) => {
     "utf8"
   );
 
+  // preload languages for shiki
+  // https://github.com/fuma-nama/fumadocs/issues/1095
+  await getSingletonHighlighter({
+    langs: Object.keys(bundledLanguages),
+  });
+
   const rendered = await highlight(codeText, {
     lang,
     meta: {
       __raw: "twoslash",
     },
-    theme: arkdarkColors,
+    themes: {
+      dark: arkdarkColors,
+      light: arkdarkColors,
+    },
     transformers: [transformerTwoslash()],
     components: {
       // @ts-expect-error -- JSX component

@@ -16,6 +16,14 @@ const config = {
       addGlobalColors: true,
     }),
   ],
+  theme: {
+    extend: {
+      colors: {
+        highlight: "#f5cf8f",
+        "ark-purple": "#ab25e9",
+      },
+    },
+  },
 } satisfies Config;
 
 export default config;

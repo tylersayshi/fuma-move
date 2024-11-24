@@ -27,10 +27,9 @@ const contact = type({
 
 // if you need the TS type, just infer it out as normal
 type Contact = typeof contact.infer;
-// ---cut-start---
-// this empty line prevents the source syntax highlighting from breaking
+// This should cut but it isn't working as expected
 
-// ---cut-end---
+// this empty line prevents the source syntax highlighting from breaking
 ```
 
 ## Compose
@@ -50,8 +49,9 @@ type _Contact = typeof _contact.t;
 interface Contact extends _Contact {}
 
 export const contact: type<Contact> = _contact;
-// ---cut---
+// ---cut-start---
 // a non-empty list of Contact
+// ---cut-end---
 const contacts = contact.array().atLeastLength(1);
 ```
 
@@ -101,11 +101,12 @@ score (133.7) must be...
 }
 
 const narrowMessage = (e: type.errors): e is RuntimeErrors => true;
-// ---cut---
+// ---cut-start---
 const out = palindromicContact({
   email: "david@arktype.io",
   score: 133.7,
 });
+// ---cut-end---
 
 if (out instanceof type.errors) {
   // ---cut-start---

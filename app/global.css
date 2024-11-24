@@ -4,8 +4,20 @@
 
 :root {
   --background: 207 100% 9%;
-  --accent: 38 84% 76%;
+  /* --accent: 38 84% 76%; */
 }
+
+/* nav .list-none a:hover {
+  @apply text-fd-accent bg-inherit opacity-60;
+}
+
+nav button.hover\:text-fd-accent-foreground:hover {
+  @apply text-black;
+}
+
+nav button.hover\:text-fd-accent-foreground:hover div {
+  @apply text-white;
+} */
 
 /**
 :host {

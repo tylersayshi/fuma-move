@@ -10,13 +10,14 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^10.2.0",
     "fumadocs-core": "14.4.2",
     "fumadocs-mdx": "11.1.1",
     "fumadocs-twoslash": "^2.0.1",
     "fumadocs-ui": "14.4.2",
     "next": "15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
     "shiki": "^1.23.1"
   },
   "devDependencies": {
@@ -39,5 +40,5 @@
     "twoslash": "^0.2.12",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@9.12.1+sha256.91452fdfa46234ae447d46d5c4fc4e7e0a7058f90495c4b6f77f8beebbb154e3"
+  "packageManager": "pnpm@9.12.1"
 }

@@ -9,7 +9,7 @@ Objects definitions can include any combination of required, optional, defaultab
 
 ### Required
 
-<Tabs>
+<Tabs items={["string", "fluent"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -46,7 +46,7 @@ const myObject = type({
 
 ### Optional
 
-<Tabs>
+<Tabs items={["string", "fluent", "tuple", "spread"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -128,7 +128,7 @@ Prefer the key-embedded syntax (`"optionalKey?":`) where possible.
 
 ### Defaultable
 
-<Tabs>
+<Tabs items={["string", "fluent", "tuple", "spread"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -173,7 +173,7 @@ const myObject = type({
 
 ### Index
 
-<Tabs>
+<Tabs items={["string"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash

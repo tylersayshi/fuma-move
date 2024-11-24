@@ -5,7 +5,7 @@ title: Arrays
 import { Tabs } from "fumadocs-ui/components/tabs";
 import { SyntaxTab } from "@/components/SyntaxTab";
 
-<Tabs>
+<Tabs items={["string", "fluent", "tuple", "spread"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -58,7 +58,7 @@ Like objects, tuples are structures whose values are nested definitions. Like Ty
 
 #### Prefix
 
-<Tabs>
+<Tabs items={["string", "fluent"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -95,7 +95,7 @@ Tuples can include any number of optional elements following its prefix elements
 
 Like in TypeScript, optional elements are mutually exclusive with postfix elements.
 
-<Tabs>
+<Tabs items={["string", "fluent"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -156,7 +156,7 @@ Like in TypeScript, variadic elements allow zero or more consecutive values of a
 
 They are specified with a `"..."` operator preceding an array element.
 
-<Tabs>
+<Tabs items={["string", "fluent"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -183,7 +183,7 @@ Postfix elements are required elements following a variadic element.
 
 They are mutually exclusive with optional elements.
 
-<Tabs>
+<Tabs items={["string", "fluent"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash

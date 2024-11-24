@@ -19,7 +19,7 @@ export const Hero = () => (
       <Link
         tabIndex={1}
         href="/docs/intro/setup"
-        className="bg-fd-accent text-black focus-within:outline focus-within:outline-2 outline-white hover:bg-fd-accent/80 p-5 rounded-full w-fit flex gap-2 my-3 text-sm items-center"
+        className="bg-highlight text-black focus-within:outline focus-within:outline-2 outline-white hover:bg-highlight/80 p-5 rounded-full w-fit flex gap-2 my-3 text-sm items-center"
       >
         Set Sail
         <ArrowRightIcon />

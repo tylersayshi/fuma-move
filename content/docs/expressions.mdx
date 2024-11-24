@@ -13,7 +13,7 @@ import { SyntaxTab } from "@/components/SyntaxTab";
 
 All unions are automatically discriminated to optimize check time and error message clarity.
 
-<Tabs>
+<Tabs items={["string", "fluent", "tuple", "spread"]}>
 	<SyntaxTab kind="string">
 
 ```ts twoslash
@@ -72,7 +72,7 @@ const unions = type({
 
 While embedded [literal syntax](/literals) is usually ideal for defining exact primitive values, `===` and `type.unit` can be helpful for referencing a non-serialiazable value like a `symbol` from your type.
 
-<Tabs>
+<Tabs items={["fluent", "tuple", "spread"]}>
 
     <SyntaxTab kind="fluent">
 
@@ -110,7 +110,7 @@ const exactValue = type("===", mySymbol);
 
 `type.enumerated` defines a type based on a list of allowed values. It is semantically equivalent to `type.unit` if provided a single value.
 
-<Tabs>
+<Tabs items={["fluent", "tuple", "spread"]}>
 
     <SyntaxTab kind="fluent">
 

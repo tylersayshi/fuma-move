@@ -37,7 +37,7 @@ type BoatProps = {
 const Boat = ({ loopDuration, bobFrames }: BoatProps) => {
   return (
     <motion.div
-      className="absolute z-10 -top-10"
+      className="absolute z-10 -top-10 pointer-events-none"
       initial={{ left: "-7%" }}
       animate={{
         left: "100%",
