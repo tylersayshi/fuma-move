@@ -2,7 +2,8 @@ import { promises as fs } from "fs";
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import { highlight } from "fumadocs-core/server";
 import arkdarkColors from "arkdark/arkdark.json" with { type: "json" };
-import { transformerTwoslash } from "fumadocs-twoslash";
+import { transformerTwoslash } from "@shikijs/twoslash";
+import { Popup, PopupContent, PopupTrigger } from "fumadocs-twoslash/ui";
 
 type CodeProps = {
   filename: string;
@@ -18,11 +19,17 @@ export const Code: React.FC<CodeProps> = async ({ filename, lang = "ts" }) => {
 
   const rendered = await highlight(codeText, {
     lang,
+    meta: {
+      __raw: "twoslash",
+    },
     theme: arkdarkColors,
     transformers: [transformerTwoslash()],
     components: {
       // @ts-expect-error -- JSX component
       pre: Pre,
+      Popup,
+      PopupContent,
+      PopupTrigger,
     },
   });
 

@@ -39,6 +39,9 @@ importers:
       '@shikijs/transformers':
         specifier: ^1.23.1
         version: 1.23.1
+      '@shikijs/twoslash':
+        specifier: ^1.23.1
+        version: 1.23.1(typescript@5.7.2)
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "start": "next start",
     "postinstall": "fumadocs-mdx"
   },
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@ark/util": "^0.23.0",
     "@shikijs/transformers": "^1.23.1",
+    "@shikijs/twoslash": "^1.23.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "22.9.0",
     "@types/react": "^18.3.12",
