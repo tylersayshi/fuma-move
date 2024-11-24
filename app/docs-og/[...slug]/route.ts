@@ -14,6 +14,8 @@ export function generateStaticParams() {
 }
 
 // TODO will handle this when moved into arktype repo
+// docs: https://fumadocs.vercel.app/docs/ui/open-graph
+
 // import { fromPackageRoot } from "@ark/fs"
 // import { OGImageRoute } from "astro-og-canvas"
 // import { getCollection } from "astro:content"
