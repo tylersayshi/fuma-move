@@ -29,41 +29,25 @@ export default function HomePage() {
           </p>
           <Code filename="unparalleledDx.twoslash.js" />
         </ArkCard>
-        <ArkCard
-          title="Faster... everything"
-          icon={<RocketIcon />}
-          className="even:translate-y-10"
-        >
+        <ArkCard title="Faster... everything" icon={<RocketIcon />}>
           <p>
             100x faster than Zod at runtime with editor performance that will
             remind you how autocomplete is supposed to feel
           </p>
           <RuntimeBenchmarksGraph className="mt-2" />
         </ArkCard>
-        <ArkCard
-          title="Clarity and Concision"
-          icon={<MessageSquareTextIcon />}
-          className="even:translate-y-10"
-        >
+        <ArkCard title="Clarity and Concision" icon={<MessageSquareTextIcon />}>
           <p>
             Definitions are half as long, type errors are twice as readable, and
             hovers tell you just what really matters
           </p>
           <Code filename="clarityAndConcision.twoslash.js" />
         </ArkCard>
-        <ArkCard
-          title="Better Errors"
-          icon={<MessageCircleWarning />}
-          className="even:translate-y-10"
-        >
+        <ArkCard title="Better Errors" icon={<MessageCircleWarning />}>
           <p>Deeply customizable messages with great defaults</p>
           <Code filename="betterErrors.twoslash.ts" />
         </ArkCard>
-        <ArkCard
-          title="Deep Introspectability"
-          icon={<SearchIcon />}
-          className="even:translate-y-10"
-        >
+        <ArkCard title="Deep Introspectability" icon={<SearchIcon />}>
           <p>
             ArkType uses set theory to understand and expose the relationships
             between your types at runtime the way TypeScript does at compile
@@ -71,11 +55,7 @@ export default function HomePage() {
           </p>
           <Code filename="deepIntrospectability.twoslash.js" />
         </ArkCard>
-        <ArkCard
-          title="Intrinsic Optimization"
-          icon={<LightbulbIcon />}
-          className="even:translate-y-10"
-        >
+        <ArkCard title="Intrinsic Optimization" icon={<LightbulbIcon />}>
           <p>
             Every schema is internally normalized and reduced to its purest and
             fastest representation
