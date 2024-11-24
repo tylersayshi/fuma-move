@@ -22,7 +22,6 @@
   "devDependencies": {
     "@ark/util": "^0.23.0",
     "@shikijs/transformers": "^1.23.1",
-    "@shikijs/twoslash": "^1.23.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "22.9.0",
     "@types/react": "^18.3.12",

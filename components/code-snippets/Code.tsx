@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import { highlight } from "fumadocs-core/server";
 import arkdarkColors from "arkdark/arkdark.json" with { type: "json" };
-import { transformerTwoslash } from "@shikijs/twoslash";
+import { transformerTwoslash } from "fumadocs-twoslash";
 import { Popup, PopupContent, PopupTrigger } from "fumadocs-twoslash/ui";
 
 type CodeProps = {
