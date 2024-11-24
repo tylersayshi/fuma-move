@@ -13,7 +13,7 @@ const coolColorStyle = `
 @scope (.ark-cards) {
   ${COOL_COLORS.map(
     (color, i) =>
-      `.ark-card:nth-child(4n + ${i}) > div:first-child {
+      `.ark-card:nth-child(${COOL_COLORS.length - 1}n + ${i}) > div:first-child {
         color: white;
         background-color: ${color}50;
         border-color: ${color};
