@@ -93,7 +93,7 @@ export default function HomePage() {
       <LinkCard
         title="Doc up"
         description="Everything you need to know from installation to integration"
-        href="/intro/setup"
+        href="/docs/intro/setup"
         className="mt-16"
       />
     </div>
