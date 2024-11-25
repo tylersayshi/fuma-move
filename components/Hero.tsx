@@ -31,10 +31,7 @@ export const Hero = () => (
       className="-mt-16 hidden md:block"
       height={400}
       width={400}
-      style={{
-        height: 400, // layout shift happens without this
-        width: 400,
-      }}
+      priority={true} // prevent layout shift
     />
   </div>
 );

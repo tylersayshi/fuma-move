@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
-import { BunIcon } from "./icons/bun";
-import { ChromiumIcon } from "./icons/chromium";
-import { DenoIcon } from "./icons/deno";
-import { IntellijIcon } from "./icons/intellij";
-import { JsIcon } from "./icons/js";
-import { NeovimIcon } from "./icons/neovim";
-import { NodeIcon } from "./icons/node";
-import { TsIcon } from "./icons/ts";
 import { VscodeIcon } from "./icons/vscode";
+import {
+  SiBun,
+  SiDeno,
+  SiIntellijidea,
+  SiJavascript,
+  SiNeovim,
+  SiTypescript,
+  SiGooglechrome,
+  SiNodedotjs,
+} from "@icons-pack/react-simple-icons";
 
 export type SvgLogoProps = {
   name: PlatformName;
@@ -19,15 +20,15 @@ export type SvgLogoProps = {
 type PlatformName = keyof typeof platforms;
 
 const platforms = {
-  js: JsIcon,
-  chromium: ChromiumIcon,
-  node: NodeIcon,
-  deno: DenoIcon,
-  ts: TsIcon,
-  neovim: NeovimIcon,
+  js: SiJavascript,
+  chromium: SiGooglechrome,
+  node: SiNodedotjs,
+  deno: SiDeno,
+  ts: SiTypescript,
+  neovim: SiNeovim,
   vscode: VscodeIcon,
-  intellij: IntellijIcon,
-  bun: BunIcon,
+  intellij: SiIntellijidea,
+  bun: SiBun,
 };
 
 type PlatformCloudProps = {
@@ -58,7 +59,7 @@ export const PlatformCloud = ({
           left: 70,
         }}
       >
-        <Main height={70} />
+        <Main height={70} width={undefined} aria-label={main} />
       </div>
       <div
         style={{
@@ -69,7 +70,7 @@ export const PlatformCloud = ({
           left: 130,
         }}
       >
-        <Right height={60} />
+        <Right height={60} width={undefined} aria-label={right} />
       </div>
       <div
         style={{
@@ -80,7 +81,7 @@ export const PlatformCloud = ({
           left: 30,
         }}
       >
-        <Left height={50} />
+        <Left height={50} width={undefined} aria-label={left} />
       </div>
       <motion.div
         style={{
@@ -91,7 +92,7 @@ export const PlatformCloud = ({
           left: 50,
         }}
       >
-        <Top height={45} />
+        <Top height={45} width={undefined} aria-label={top} />
       </motion.div>
     </div>
   );

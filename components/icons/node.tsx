@@ -1,8 +1,12 @@
-export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
+export const NodeIcon: React.FC<{ height: number; width: number | string }> = ({
+  height,
+  width,
+}) => (
   <svg
-    viewBox="-3.8 -1.5 40.921 40.921"
     xmlns="http://www.w3.org/2000/svg"
     height={height}
+    width={width}
+    viewBox="-3.8 -1.5 40.921 40.921"
   >
     <defs>
       <linearGradient
@@ -13,13 +17,10 @@ export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
         y2="341.772"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".3" stopColor="#3e863d" />
-
-        <stop offset=".5" stopColor="#55934f" />
-
-        <stop offset=".8" stopColor="#5aad45" />
+        <stop offset=".3" stop-color="#3e863d" />
+        <stop offset=".5" stop-color="#55934f" />
+        <stop offset=".8" stop-color="#5aad45" />
       </linearGradient>
-
       <linearGradient
         id="d"
         x1="186.484"
@@ -28,13 +29,10 @@ export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
         y2="239.465"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".57" stopColor="#3e863d" />
-
-        <stop offset=".72" stopColor="#619857" />
-
-        <stop offset="1" stopColor="#76ac64" />
+        <stop offset=".57" stop-color="#3e863d" />
+        <stop offset=".72" stop-color="#619857" />
+        <stop offset="1" stop-color="#76ac64" />
       </linearGradient>
-
       <linearGradient
         id="f"
         x1="197.051"
@@ -43,15 +41,15 @@ export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
         y2="279.652"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".16" stopColor="#6bbf47" />
+        <stop offset=".16" stop-color="#6bbf47" />
 
-        <stop offset=".38" stopColor="#79b461" />
+        <stop offset=".38" stop-color="#79b461" />
 
-        <stop offset=".47" stopColor="#75ac64" />
+        <stop offset=".47" stop-color="#75ac64" />
 
-        <stop offset=".7" stopColor="#659e5a" />
+        <stop offset=".7" stop-color="#659e5a" />
 
-        <stop offset=".9" stopColor="#3e863d" />
+        <stop offset=".9" stop-color="#3e863d" />
       </linearGradient>
 
       <clipPath id="a">
@@ -67,21 +65,21 @@ export const NodeIcon: React.FC<{ height: number }> = ({ height }) => (
       </clipPath>
     </defs>
 
-    <g clipPath="url(#a)" transform="translate(-68.564 -79.701) scale(.35278)">
+    <g clip-path="url(#a)" transform="translate(-68.564 -79.701) scale(.35278)">
       <path
         fill="url(#b)"
         d="m331.363 246.793-118.715-58.19-60.87 124.174L270.49 370.97zm0 0"
       />
     </g>
 
-    <g clipPath="url(#c)" transform="translate(-68.564 -79.701) scale(.35278)">
+    <g clip-path="url(#c)" transform="translate(-68.564 -79.701) scale(.35278)">
       <path
         fill="url(#d)"
         d="m144.07 264.004 83.825 113.453 110.86-81.906-83.83-113.45zm0 0"
       />
     </g>
 
-    <g clipPath="url(#e)" transform="translate(-68.564 -79.701) scale(.35278)">
+    <g clip-path="url(#e)" transform="translate(-68.564 -79.701) scale(.35278)">
       <path fill="url(#f)" d="M197.02 225.934v107.43h91.683v-107.43zm0 0" />
     </g>
   </svg>
