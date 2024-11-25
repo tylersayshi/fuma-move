@@ -31,7 +31,12 @@ export const Hero = () => (
       className="-mt-16 hidden md:block"
       height={400}
       width={400}
-      priority={true} // prevent layout shift
+      // priority // I think this only works on vercel hosting
+      style={{
+        // not needed if priority is used
+        height: 400, // layout shift happens without this
+        width: 400,
+      }}
     />
   </div>
 );
