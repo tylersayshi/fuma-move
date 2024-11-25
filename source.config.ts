@@ -10,9 +10,11 @@ const arkdarkPackageJson = (
   })
 ).default;
 
-const arktypeTextmate = await import("arkdark/tsWithArkType.tmLanguage.json", {
-  with: { type: "json" },
-});
+const arktypeTextmate = (
+  await import("arkdark/tsWithArkType.tmLanguage.json", {
+    with: { type: "json" },
+  })
+).default;
 
 export const { docs, meta } = defineDocs({
   dir: "content/docs",
@@ -123,7 +125,10 @@ export default defineConfig({
         light: arkdarkPackageJson as never,
       },
       ...rehypeCodeDefaultOptions,
-      langs: [arktypeTextmate as never],
+      langs: [
+        { ...arktypeTextmate, name: "ts" } as never,
+        ...(rehypeCodeDefaultOptions.langs ?? []),
+      ],
       transformers: [
         ...(rehypeCodeDefaultOptions.transformers ?? []),
         twoslash,
