@@ -74,7 +74,7 @@ export default function HomePage() {
         title="Doc up"
         description="Everything you need to know from installation to integration"
         href="/docs/intro/setup"
-        className="mt-16"
+        className="sm:mt-16 mt-4"
       />
     </div>
   );
