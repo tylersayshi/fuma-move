@@ -126,8 +126,8 @@ export default defineConfig({
       },
       ...rehypeCodeDefaultOptions,
       langs: [
-        { ...arktypeTextmate, name: "ts" } as never,
         ...(rehypeCodeDefaultOptions.langs ?? []),
+        { ...arktypeTextmate, name: "ts" } as never,
       ],
       transformers: [
         ...(rehypeCodeDefaultOptions.transformers ?? []),
