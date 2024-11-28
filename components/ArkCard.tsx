@@ -9,21 +9,15 @@ const COOL_COLORS = [
   "#3347ff", // blue
 ];
 
-const coolColorStyle = `
-@scope (.ark-cards) {
-  ${COOL_COLORS.map(
-    (color, i) =>
-      `.ark-card:nth-child(${COOL_COLORS.length - 1}n + ${i}) > div:first-child {
+const coolColorStyle = COOL_COLORS.map(
+  (color, i) =>
+    `.ark-card:nth-child(${COOL_COLORS.length - 1}n + ${i}) > div:first-child {
         color: white;
         background-color: ${color}50;
         border-color: ${color};
         border-width: 2px;
     }`
-  ).join("\n")}
-}
-`;
-
-// css scope docs: https://developer.mozilla.org/en-US/docs/Web/CSS/@scope
+).join("\n");
 
 export const ArkCards: React.FC<{ children: React.ReactNode }> = ({
   children,
