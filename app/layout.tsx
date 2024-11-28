@@ -13,7 +13,15 @@ export default function Layout({ children }: { children: ReactNode }) {
     <html lang="en" className={raleway.className} suppressHydrationWarning>
       <link rel="icon" href="/image/favicon.svg" />
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          search={{
+            options: {
+              type: "static",
+            },
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );

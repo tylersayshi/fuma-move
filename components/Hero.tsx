@@ -1,7 +1,6 @@
 import { PlatformCloud } from "./PlatformCloud";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export const Hero = () => (
   <div className="flex justify-between">
@@ -25,13 +24,13 @@ export const Hero = () => (
         <ArrowRightIcon />
       </Link>
     </div>
-    <Image
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
       alt="A serene ark, sailing to runtime"
       src="/image/splash.png"
       className="-mt-16 hidden md:block"
       height={400}
       width={400}
-      priority // I think this only works on vercel hosting
     />
   </div>
 );
