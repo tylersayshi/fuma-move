@@ -125,7 +125,7 @@ export const shikiConfig = {
     light: arkdarkColors.default,
   },
   langs: [
-    ...(rehypeCodeDefaultOptions.langs ?? []),
+    ...(rehypeCodeDefaultOptions.langs ?? []).filter((lang) => lang !== "ts"),
     { ...arktypeTextmate, name: "ts" } as never,
   ],
   transformers: [
