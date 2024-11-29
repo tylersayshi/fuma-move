@@ -126,6 +126,8 @@ export const shikiConfig = {
   },
   langs: [
     ...(rehypeCodeDefaultOptions.langs ?? []).filter((lang) => lang !== "ts"),
+    "json" as const,
+    "bash" as const,
     { ...arktypeTextmate, name: "ts" } as never,
   ],
   transformers: [

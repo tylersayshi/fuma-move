@@ -1,5 +1,5 @@
 import { ArkCard, ArkCards } from "@/components/ArkCard";
-import { Code } from "@/components/code-snippets/Code";
+import { CodeSnippet } from "@/components/code-snippets/Code";
 import { Hero } from "@/components/Hero";
 import { TsIcon } from "@/components/icons/ts";
 import { LinkCard } from "@/components/LinkCard";
@@ -27,7 +27,7 @@ export default function HomePage() {
             Type syntax you already know with safety and completions unlike
             anything you&apos;ve ever seen
           </p>
-          <Code filename="unparalleledDx.twoslash.js" />
+          <CodeSnippet filename="unparalleledDx.twoslash.js" />
         </ArkCard>
         <ArkCard title="Faster... everything" icon={<RocketIcon />}>
           <p>
@@ -41,11 +41,11 @@ export default function HomePage() {
             Definitions are half as long, type errors are twice as readable, and
             hovers tell you just what really matters
           </p>
-          <Code filename="clarityAndConcision.twoslash.js" />
+          <CodeSnippet filename="clarityAndConcision.twoslash.js" />
         </ArkCard>
         <ArkCard title="Better Errors" icon={<MessageCircleWarning />}>
           <p>Deeply customizable messages with great defaults</p>
-          <Code filename="betterErrors.twoslash.ts" />
+          <CodeSnippet filename="betterErrors.twoslash.ts" />
         </ArkCard>
         <ArkCard title="Deep Introspectability" icon={<SearchIcon />}>
           <p>
@@ -53,14 +53,14 @@ export default function HomePage() {
             between your types at runtime the way TypeScript does at compile
             time
           </p>
-          <Code filename="deepIntrospectability.twoslash.js" />
+          <CodeSnippet filename="deepIntrospectability.twoslash.js" />
         </ArkCard>
         <ArkCard title="Intrinsic Optimization" icon={<LightbulbIcon />}>
           <p>
             Every schema is internally normalized and reduced to its purest and
             fastest representation
           </p>
-          <Code filename="intrinsicOptimization.twoslash.js" />
+          <CodeSnippet filename="intrinsicOptimization.twoslash.js" />
         </ArkCard>
         {/* <Card title="Portable" icon="seti:json">
         <p>

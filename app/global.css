@@ -67,6 +67,15 @@ pre.shiki,
   overflow-x: visible !important;
 }
 
+div.twoslash-popup-container {
+  /* padding: 0; */
+  border-radius: 1rem;
+  background: #001323aa;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--hover-glow);
+  /* border: none; */
+}
+
 .error {
   position: relative;
   background-color: #f8585822;
@@ -92,17 +101,9 @@ pre.shiki,
 }
 
 /* avoid double padding + border */
-.twoslash .twoslash-popup-code pre {
-  margin: -6px -8px !important;
+.shiki > .shiki {
+  padding: 0;
   border-width: 0px;
-}
-
-.twoslash .twoslash-hover .twoslash-popup-container,
-.twoslash .twoslash-completion-cursor .twoslash-completion-list {
-  border-radius: 1rem;
-  background: #001323aa;
-  backdrop-filter: blur(8px);
-  box-shadow: var(--hover-glow);
 }
 
 /** display runtime errors on hover */
