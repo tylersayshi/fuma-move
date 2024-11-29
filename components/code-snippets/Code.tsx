@@ -11,6 +11,10 @@ type CodeProps = {
   lang?: string;
 };
 
+const arkdarkColors = await import("arkdark/arkdark.json", {
+  with: { type: "json" },
+});
+
 export const Code: React.FC<CodeProps> = async ({ filename, lang = "ts" }) => {
   const codeText = await fs.readFile(
     process.cwd() + "/components/code-snippets/snippets/" + filename,
@@ -28,6 +32,11 @@ export const Code: React.FC<CodeProps> = async ({ filename, lang = "ts" }) => {
     meta: {
       __raw: "twoslash",
     },
+    themes: {
+      dark: arkdarkColors,
+      light: arkdarkColors,
+    },
+    theme: arkdarkColors,
     lang,
     components: {
       // @ts-expect-error -- JSX component

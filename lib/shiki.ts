@@ -17,6 +17,7 @@ const arktypeTextmate = (
 
 const twoslashPropertyPrefix = "(property) ";
 const twoslash = transformerTwoslash({
+  explicitTrigger: false,
   langs: ["ts", "js"],
   twoslashOptions: {
     compilerOptions: {
@@ -114,11 +115,11 @@ declare global {
 });
 
 export const shikiConfig = {
+  ...rehypeCodeDefaultOptions,
   themes: {
     dark: arkdarkPackageJson as never,
     light: arkdarkPackageJson as never,
   },
-  ...rehypeCodeDefaultOptions,
   langs: [
     ...(rehypeCodeDefaultOptions.langs ?? []),
     { ...arktypeTextmate, name: "ts" } as never,

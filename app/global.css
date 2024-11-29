@@ -1,97 +1,121 @@
+@font-face {
+  font-family: "Cascadia Mono";
+  src:
+    local("Cascadia Mono"),
+    url("https://fonts.cdnfonts.com/s/37910/CascadiaMono.woff") format("woff");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: 207 100% 9%;
-  /* --accent: 38 84% 76%; */
+  --hover-glow: 0.5rem 0.5rem 2rem 0 rgba(31, 38, 135, 0.37);
+
+  /* Based on ArkDark ErrorLens */
+  --ark-green: #40decc;
+  --ark-error: #9558f8;
+  --ark-success: #40decca0;
+  --ark-runtime-error: #f85858;
+
+  /** @shikijs/twoslash/style-rich.css overrides */
+  --twoslash-border-color: #ba7e4127;
+  --twoslash-underline-color: currentColor;
+  --twoslash-highlighted-border: #c37d0d50;
+  --twoslash-highlighted-bg: #c37d0d20;
+  --twoslash-popup-bg: transparent;
+  --twoslash-popup-color: inherit;
+  --twoslash-popup-shadow: var(--shadow);
+  --twoslash-docs-color: #888;
+  --twoslash-docs-font: sans-serif;
+  --twoslash-code-font: inherit;
+  --twoslash-code-font-size: 1em;
+  --twoslash-matched-color: inherit;
+  --twoslash-unmatched-color: #888;
+  --twoslash-cursor-color: var(--sl-color-gray-2);
+  --twoslash-error-color: var(--ark-error);
+  --twoslash-error-bg: #9558f818;
+  --twoslash-warn-color: #c37d0d;
+  --twoslash-warn-bg: #c37d0d20;
+  --twoslash-tag-color: #3772cf;
+  --twoslash-tag-bg: #3772cf20;
+  --twoslash-tag-warn-color: var(--twoslash-warn-color);
+  --twoslash-tag-warn-bg: var(--twoslash-warn-bg);
+  --twoslash-tag-annotate-color: #1ba673;
+  --twoslash-tag-annotate-bg: #1ba67320;
 }
 
-/* nav .list-none a:hover {
-  @apply text-fd-accent bg-inherit opacity-60;
-}
-
-nav button.hover\:text-fd-accent-foreground:hover {
-  @apply text-black;
-}
-
-nav button.hover\:text-fd-accent-foreground:hover div {
-  @apply text-white;
-} */
-
-/**
-:host {
-  --size-gap-half: 4px;
-  --size-gap: 8px;
-  --size-gap-double: 16px;
-  --size-gap-triple: 24px;
-  --size-gap-quad: 32px;
-
-  --size-font-small: 14px;
-  --size-font: 16px;
-  --size-font-big: 20px;
-  --size-font-bigger: 24px;
-
-  --color-background: white;
-  --color-font: #757575;
-  --color-backdrop: rgba(17, 17, 17, 0.2);
-  --color-border-shadow: rgba(0, 0, 0, 0.145);
-
-  --color-title-color: #1f1f1f;
-  --color-stack-h6: #222;
-  --color-stack-headline: #666;
-  --color-stack-subline: #999;
-  --color-stack-notes: #777;
-
-  --color-accents-1: #808080;
-  --color-accents-2: #222222;
-  --color-accents-3: #404040;
-
-  --color-text-color-red-1: #ff5555;
-  --color-text-background-red-1: #fff9f9;
-
-  --font-stack-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono',
-    Menlo, Courier, monospace;
-  --font-stack-sans: -apple-system, 'Source Sans Pro', sans-serif;
-
-  --color-ansi-selection: rgba(95, 126, 151, 0.48);
-  --color-ansi-bg: #111111;
-  --color-ansi-fg: #cccccc;
-
-  --color-ansi-white: #777777;
-  --color-ansi-black: #141414;
-  --color-ansi-blue: #00aaff;
-  --color-ansi-cyan: #88ddff;
-  --color-ansi-green: #98ec65;
-  --color-ansi-magenta: #aa88ff;
-  --color-ansi-red: #ff5555;
-  --color-ansi-yellow: #ffcc33;
-  --color-ansi-bright-white: #ffffff;
-  --color-ansi-bright-black: #777777;
-  --color-ansi-bright-blue: #33bbff;
-  --color-ansi-bright-cyan: #bbecff;
-  --color-ansi-bright-green: #b6f292;
-  --color-ansi-bright-magenta: #cebbff;
-  --color-ansi-bright-red: #ff8888;
-  --color-ansi-bright-yellow: #ffd966;
-}
-
-@media (prefers-color-scheme: dark) {
-  :host {
-    --color-background: rgb(28, 28, 30);
-    --color-font: white;
-    --color-backdrop: rgb(44, 44, 46);
-    --color-border-shadow: rgba(255, 255, 255, 0.145);
-
-    --color-title-color: #fafafa;
-    --color-stack-h6: rgb(200, 200, 204);
-    --color-stack-headline: rgb(99, 99, 102);
-    --color-stack-notes: #a9a9a9;
-    --color-stack-subline: rgb(121, 121, 121);
-
-    --color-accents-3: rgb(118, 118, 118);
-
-    --color-text-background-red-1: #2a1e1e;
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
   }
 }
-*/
+
+pre,
+code {
+  font-family: "Cascadia Mono", monospace;
+}
+
+pre.astro-code,
+pre.shiki,
+.twoslash-popup-container,
+.copy-button {
+  border-radius: 1rem;
+  border-color: #ba7e4127;
+  border-width: 1px;
+  overflow-x: visible !important;
+}
+
+.error {
+  position: relative;
+  background-color: #f8585822;
+  border-left: 3px solid var(--ark-runtime-error);
+  padding: 4px;
+  padding-right: 16px;
+  margin: 0.2em 0;
+  min-width: 100%;
+  width: max-content;
+}
+
+.error > span {
+  color: var(--ark-runtime-error) !important;
+}
+
+.twoslash .twoslash-error {
+  /* Override the builtin error squiggle to match our theme */
+  background: url("/image/errorSquiggle.svg") repeat-x bottom left;
+}
+
+.twoslash .twoslash-popup-code {
+  white-space: pre;
+}
+
+/* avoid double padding + border */
+.twoslash .twoslash-popup-code pre {
+  margin: -6px -8px !important;
+  border-width: 0px;
+}
+
+.twoslash .twoslash-hover .twoslash-popup-container,
+.twoslash .twoslash-completion-cursor .twoslash-completion-list {
+  border-radius: 1rem;
+  background: #001323aa;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--hover-glow);
+}
+
+/** display runtime errors on hover */
+.twoslash .twoslash-popup-docs {
+  color: var(--ark-runtime-error);
+  font-size: small;
+  white-space: pre;
+}
+
+/* Firefox specific rules */
+@-moz-document url-prefix() {
+  /* The backdrop-filter above doesn't work by default yet on Firefox so we do this instead  */
+  .twoslash .twoslash-hover:hover .twoslash-popup-container {
+    background: #001323ee;
+  }
+}
