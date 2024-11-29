@@ -101,7 +101,7 @@ const myObject = type({
 
 </Tabs>
 
-:::caution[Optional and default only work within objects!]
+<Callout type="warn" title="Optional and default only work within objects!">
 Adding a `optional` or `default` to a `Type` doesn't alter its standalone behavior.
 
 Rather, it adds metadata that changes how it works when referenced from an object or tuple.
@@ -124,7 +124,8 @@ objectWithOptionalKey.allows({}); // true
 </details>
 
 Prefer the key-embedded syntax (`"optionalKey?":`) where possible.
-:::
+
+</Callout>
 
 ### Defaultable
 

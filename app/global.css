@@ -101,7 +101,8 @@ div.twoslash-popup-container {
 }
 
 /* avoid double padding + border */
-.shiki > .shiki {
+.shiki > .shiki,
+.twoslash-popup-container > .shiki {
   padding: 0;
   border-width: 0px;
 }

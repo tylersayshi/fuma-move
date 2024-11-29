@@ -14,9 +14,11 @@
     "configuration",
     "---Advanced---",
     "scopes",
-    "integrations",
+    "generics",
     "---Other---",
+    "integrations",
     "faq",
-    "about"
+    "about",
+    "keywords"
   ]
 }
