@@ -114,11 +114,15 @@ declare global {
   },
 });
 
+const arkdarkColors = await import("arkdark/arkdark.json", {
+  with: { type: "json" },
+});
+
 export const shikiConfig = {
   ...rehypeCodeDefaultOptions,
   themes: {
-    dark: arkdarkPackageJson as never,
-    light: arkdarkPackageJson as never,
+    dark: arkdarkColors.default,
+    light: arkdarkColors.default,
   },
   langs: [
     ...(rehypeCodeDefaultOptions.langs ?? []),
